@@ -27,6 +27,36 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    console.log(dancer);
     $('body').append(dancer.$node);
   });
-});
+
+  // making a square dancer
+  $(".addSquareButton").on("click", function(event) {
+    var squareMakerFunctionName = $(this).data("square-maker-function-name")
+    var squareDancerMakerFunction = window[squareMakerFunctionName]
+
+    var squareDancer = new squareDancerMakerFunction(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
+    console.log(squareDancer);
+    $('body').append(squareDancer.$node);
+
+  });
+
+  // Van Dam
+  $(".addVanDamButton").on("click", function(event) {
+    var vanDamMakerFunctionName = $(this).data("vandam-maker-function-name")
+    var vanDamDancerMakerFunction = window[vanDamMakerFunctionName]
+    var vanDamDancer = new vanDamDancerMakerFunction(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(vanDamDancer.$node);
+
+  });
+
+}); // document ready e

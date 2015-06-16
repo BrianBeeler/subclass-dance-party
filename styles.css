@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title,.squareDancerButton, .streetFighterButton, .addVanDamButton, .addSquareButton{
   padding:5px 12px;
   float:right;
 }
@@ -24,4 +24,27 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.square-dancer{
+  border: 10px solid blue;
+  border-radius: 0px;
+  position: absolute;
+}
+.streetFighter {
+  height: 400px;
+  width: 300px;
+  background: url(streetFighter.png);
+}
+.van-dam {
+  width: 200px;
+  border: 0px;
+  height: 250px;
+  display: block;
+  background: url(vanDam.gif)
+}
+
+.red {
+  background: red;
+  height: 200px;
 }
